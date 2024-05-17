@@ -1,5 +1,7 @@
 # Supermarket Receipt Generator
 # by: @brohmarr
+# 
+# Python v3.12.3
 
 from supermarket import Supermarket
 
