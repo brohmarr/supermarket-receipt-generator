@@ -8,10 +8,13 @@ import json
 
 class Customer:
     
-    # TODO: Implement this!
     def __init__(self):
-        pass
+        self.credit_card_data = {}
+
+        # Opening the JSON file to get the input data into a dictionary.
+        with open('customer_data.json', mode = 'r') as json_file:
+            self.credit_card_data = json.load(json_file)
     
-    # TODO: Implement this!
+    # Retrieving the data received.
     def get_customer_data(self):
-        pass
+        return self.credit_card_data
