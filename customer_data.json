@@ -1,0 +1,7 @@
+{
+    "first_name": "John",
+    "last_name": "Doe",
+    "payment_method": "Credit Card",
+    "card_number": "1234 3456 5678 7890",
+    "card_flag": "Supercard"
+}
