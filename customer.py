@@ -6,7 +6,7 @@
 import json
 
 
-class Inventory:
+class Customer:
     
     # TODO: Implement this!
     def __init__(self):
