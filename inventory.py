@@ -15,7 +15,7 @@ class Inventory:
         with open('item_prices.txt', mode = 'r') as csv_file:
             csv_reader = csv.DictReader(csv_file)
             
-            # Copying the data received into a dictionary for fast lookups.
+            # Copying the data received into a dictionary.
             for row in csv_reader:
                 self.price_per_item[row["name"]] = row["price"]
     

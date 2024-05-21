@@ -9,17 +9,10 @@ from customer import Customer
 
 class Supermarket:
     
-    # TODO: Implement this!
-    def __init__(self):
-        pass
-
-    # TODO: Implement this!
-    def __str__(self):
-        pass
-
-    # TODO: Implement this!
-    def format_receipt(self):
-        pass
+    def __init__(self, name: str = "Supermarket"):
+        self.name = name
+        self.inventory = Inventory()
+        self.customer = Customer()
     
     # TODO: Implement this!
     def print_receipt(self):

@@ -1,6 +1,15 @@
 {
     "first_name": "John",
     "last_name": "Doe",
+    "shopping_list": {
+        "Apples": 6,
+        "Bananas": 18,
+        "Mangoes": 2,
+        "Oranges": 12,
+        "Pears": 3,
+        "Strawberries": 32,
+        "Watermelon": 2
+    },
     "payment_method": "Credit Card",
     "card_number": "1234 3456 5678 7890",
     "card_flag": "Supercard"
