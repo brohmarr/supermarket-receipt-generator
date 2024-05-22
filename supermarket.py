@@ -27,6 +27,7 @@ class Supermarket:
         formatted_date = f"{current_date:%a %b %d, %Y @ %I:%M %p}"
         centered_date = f"{formatted_date:{heading_align}{width}}"
 
+        # Adding the newly formatted strings to the "receipt" list.
         self.receipt.extend([centered_date, section_separator])
 
     def format_receipt_shopping_list(self, price_total, num_separator, precision, width, fill, body_align, section_separator):
@@ -44,8 +45,10 @@ class Supermarket:
             current_line = f"{product} x{quantity}"
             current_line += f"{formatted_price:{fill}{body_align}{price_width}}"
 
+            # Adding the newly formatted strings to the "receipt" list.
             self.receipt.append(current_line)
         
+        # Adding the section separator to the "receipt" list.
         self.receipt.append(section_separator)
 
         return price_total
@@ -79,6 +82,7 @@ class Supermarket:
 
         str_change = f"Change{formatted_change:{fill}{body_align}{change_width}}"
 
+        # Adding the newly formatted strings to the "receipt" list.
         self.receipt.extend([str_price_total, str_value_paid, str_change, section_separator])
 
     def format_customer_information(self, fill, body_align, width):
@@ -104,6 +108,7 @@ class Supermarket:
 
         str_card_flag_and_number = f"{card_flag}{formatted_card_number:{fill}{body_align}{card_number_width}}"
 
+        # Adding the newly formatted strings to the "receipt" list.
         self.receipt.extend([str_name_and_payment, str_card_flag_and_number])
 
     def build_receipt(self, value_paid: float = None):
@@ -134,10 +139,3 @@ class Supermarket:
 
         # Returning the fully built receipt (a list of formatted strings).
         return self.receipt
-
-
-# Testing...
-test = Supermarket("Lovely Fruits")
-test.build_receipt()
-for line in test.receipt:
-    print(line)

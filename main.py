@@ -6,8 +6,20 @@
 from supermarket import Supermarket
 
 
-# TODO: Implement this!
 def main():
-    pass
+    supermarket = Supermarket("Fresh Fruits")
+    
+    receipt = supermarket.build_receipt()
+    first_line = True
+    with open("receipt.txt", mode = "w") as receipt_file:
+        for line in receipt:
+            if first_line:
+                receipt_file.write(line)
+                first_line = False
+
+                continue
+            
+            receipt_file.write("\n" + line)
+
 
 main()
