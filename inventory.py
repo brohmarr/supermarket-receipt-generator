@@ -17,7 +17,7 @@ class Inventory:
             
             # Copying the data received into a dictionary.
             for row in csv_reader:
-                self.price_per_item[row["name"]] = row["price"]
+                self.price_per_item[row["name"]] = float(row["price"])
     
     # Retrieving the data received.
     def get_item_prices(self):

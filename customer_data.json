@@ -1,16 +1,16 @@
 {
     "first_name": "John",
     "last_name": "Doe",
-    "shopping_list": {
-        "Apples": 6,
-        "Bananas": 18,
-        "Mangoes": 2,
-        "Oranges": 12,
-        "Pears": 3,
-        "Strawberries": 32,
-        "Watermelon": 2
-    },
+    "shopping_list": [
+        {"fruit": "Apples", "quantity": 50},
+        {"fruit": "Bananas", "quantity": 100},
+        {"fruit": "Mangoes", "quantity": 30},
+        {"fruit": "Oranges", "quantity": 50},
+        {"fruit": "Pears", "quantity": 50},
+        {"fruit": "Strawberries", "quantity": 150},
+        {"fruit": "Watermelon", "quantity": 15}
+    ],
     "payment_method": "Credit Card",
-    "card_number": "1234 3456 5678 7890",
-    "card_flag": "Supercard"
+    "card_flag": "Supercard",
+    "card_number": "1234 3456 5678 7890"
 }
