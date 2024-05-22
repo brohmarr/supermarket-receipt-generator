@@ -99,17 +99,22 @@ class Supermarket:
 
         str_name_and_payment = f"{customer_name}{payment_method:{fill}{body_align}{payment_method_width}}"
 
-        # Formatting the customer's card flag with its number.
-        card_flag = customer_data["card_flag"]
+        # Formatting the customer's card flag with its number...
+        if payment_method[-4:].lower() == "card":
+            card_flag = customer_data["card_flag"]
 
-        card_number = customer_data["card_number"][-4:]
-        formatted_card_number = f"**** {card_number}"
-        card_number_width = width - len(card_flag)
+            card_number = customer_data["card_number"][-4:]
+            formatted_card_number = f"**** {card_number}"
+            card_number_width = width - len(card_flag)
 
-        str_card_flag_and_number = f"{card_flag}{formatted_card_number:{fill}{body_align}{card_number_width}}"
+            str_payment_method = f"{card_flag}{formatted_card_number:{fill}{body_align}{card_number_width}}"
+        
+        # ... or setting it as "Cash".
+        else:
+            str_payment_method = f"Cash"
 
         # Adding the newly formatted strings to the "receipt" list.
-        self.receipt.extend([str_name_and_payment, str_card_flag_and_number])
+        self.receipt.extend([str_name_and_payment, str_payment_method])
 
     def build_receipt(self, value_paid: float = None):
         # Defining the formatting values.
