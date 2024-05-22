@@ -20,15 +20,13 @@ class Supermarket:
         # Formatting the Supermarket's name.
         name = f"{self.name:{heading_align}{width}}"
 
-        self.receipt.extend([section_separator, name, section_separator])
-
         # Formatting the current date.
         current_date = datetime.now()
         formatted_date = f"{current_date:%a %b %d, %Y @ %I:%M %p}"
         centered_date = f"{formatted_date:{heading_align}{width}}"
 
         # Adding the newly formatted strings to the "receipt" list.
-        self.receipt.extend([centered_date, section_separator])
+        self.receipt.extend([section_separator, name, section_separator, centered_date, section_separator])
 
     def format_receipt_shopping_list(self, price_total, num_separator, precision, width, fill, body_align, section_separator):
         # Formatting the customer's shopping list.
