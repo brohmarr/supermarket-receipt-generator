@@ -8,17 +8,20 @@ import csv
 
 class Inventory:
     
+
     def __init__(self):
+    
         self.price_per_item = {}
 
-        # Opening the CSV file to get the input data.
+        # Opens the CSV file to get the input data.
         with open('item_prices.txt', mode = 'r') as csv_file:
             csv_reader = csv.DictReader(csv_file)
             
-            # Copying the data received into a dictionary.
+            # Copy the data received into a dictionary.
             for row in csv_reader:
                 self.price_per_item[row["name"]] = float(row["price"])
     
-    # Retrieving the data received.
+    # Retrieves the data received.
     def get_item_prices(self):
+    
         return self.price_per_item

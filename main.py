@@ -7,15 +7,21 @@ from supermarket import Supermarket
 
 
 def main():
+
+    
     supermarket = Supermarket("Fresh Fruits")
     
-    # Generating the receipt (a list of strings).
+    # Saving the receipt in a list o strings to be iterated and written into
+    # a text file (this program's output).    
     receipt = supermarket.build_receipt()
     
-    # Creating the receipt text file and writing the receipt data in it.
+    # Creates the output text file (if it doesn't exist yet) and opens it to
+    # start writting the receipt content line by line.
     first_line = True
     with open("receipt.txt", mode = "w") as receipt_file:
         for line in receipt:
+            # This condition helps to avoid an extra empty line at the end
+            # of the text output file.
             if first_line:
                 receipt_file.write(line)
                 first_line = False
@@ -25,4 +31,5 @@ def main():
             receipt_file.write("\n" + line)
 
 
+# Starting the program...
 main()
