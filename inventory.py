@@ -7,6 +7,22 @@ import csv
 
 
 class Inventory:
+    """
+    A class used to represent a supermarket inventory.
+
+    ---
+
+    Attributes
+    ----------
+    price_per_item : dict
+        A dictionary to hold the data read from the item_prices.txt (CSV)
+        input file.
+    
+    Methods
+    -------
+    get_item_prices()
+        Returns the price_per_item attribute.
+    """
     
 
     def __init__(self):
@@ -23,5 +39,8 @@ class Inventory:
     
     # Retrieves the data received.
     def get_item_prices(self):
+        """
+        Returns the price_per_item attribute.
+        """
     
         return self.price_per_item
