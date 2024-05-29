@@ -9,3 +9,9 @@ It starts by taking in the input files and converting both of them to dictionari
 In the end, this quick idea helped me review Python’s string interpolation tools and when to use each of them; f-strings (I was used to str.format()); working with CSV and JSON files; and to learn how to use Python's Format Specification Mini-Language.
 
 Another useful thing I took from this little project was to start using docstrings, as I was used to completely ignoring this tool and just typing regular comments everywhere. With a smaller code base, there wasn’t much to document this time, so it was the perfect opportunity to start building this habit.
+
+## Instructions
+
+To run this program, clone (or download) this repository and run the ```main.py``` file.
+
+**NOTE:** The Python version used in this project was v3.12.3.
